@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/activity_login.xml",
+        "source": "com.example.permissionapp-main-67:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/activity_main.xml",
+        "source": "com.example.permissionapp-main-67:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/activity_user.xml",
+        "source": "com.example.permissionapp-main-67:/layout/activity_user.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/activity_home.xml",
+        "source": "com.example.permissionapp-main-67:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/fragment_scan.xml",
+        "source": "com.example.permissionapp-main-67:/layout/fragment_scan.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/fragment_scanner.xml",
+        "source": "com.example.permissionapp-main-67:/layout/fragment_scanner.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/fragment_show_q_r.xml",
+        "source": "com.example.permissionapp-main-67:/layout/fragment_show_q_r.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/content_home.xml",
+        "source": "com.example.permissionapp-main-67:/layout/content_home.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/nav_header_home.xml",
+        "source": "com.example.permissionapp-main-67:/layout/nav_header_home.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/app_bar_home.xml",
+        "source": "com.example.permissionapp-main-67:/layout/app_bar_home.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/fragment_home.xml",
+        "source": "com.example.permissionapp-main-67:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.permissionapp-mergeDebugResources-64:/layout/fragment_events.xml",
+        "source": "com.example.permissionapp-main-67:/layout/fragment_events.xml"
+    }
+]

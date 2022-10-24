@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">PermissionApp</string>
+    <string name="author">Yeison Maldonado</string>
+    <string name="btnAdmin">Administrador</string>
+    <string name="btnUser">Ingreso usuario</string>
+    <string name="tvDescri">La verificacion a tu bolsillo</string>
+    <string name="tvmail">correo</string>
+    <string name="required">Obligatorio</string>
+    <string name="tv_pass">contraseña</string>
+    <string name="btn_login">Iniciar sesion</string>
+    <string name="tv_title">Crea una cuenta</string>
+    <string name="tv_name">Nombres</string>
+    <string name="tv_lastname">Apellidos</string>
+    <string name="tv_email">Email</string>
+    <string name="tv_id">Numero de identificacion</string>
+    <string name="tv_id2">Numero</string>
+    <string name="tv_typeId">Tipo de documento</string>
+    <string name="tv_data">Acepto politica de tratamiento de datos.</string>
+    <string name="tv_condition">Acepto terminos y condiciones.</string>
+    <string name="tv_password">Contraseña</string>
+    <string name="tv_passC">Confirmar contraseña</string>
+    <string name="tv_next">Siguiente</string>
+    <string name="tv_birth">Fecha de nacimiento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_scannerId">Escanear documento de identidad</string>
+    <string name="tv_scanText">Por favor escanea tu documento</string>
+    <string name="tv_finish">Finalizar</string>
+    <string name="tv_scanCorrect">Escaneo exitoso</string>
+    <string name="tv_tochScan">Oprima para escanear</string>
+    <string name="edt_date_selecion">Selecciona la fecha</string>
+    <string-array name="type_id">
+        <item>Seleccione documento</item>
+        <item>Tarjeta de identidad</item>
+        <item>Cedula de ciudadania</item>
+        <item>Cedula de extranjeria</item>
+        <item>Numero pasaporte</item>
+    </string-array>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Agregar evento</string>
+    <string name="menu_slideshow">Escanear QR</string>
+</resources>

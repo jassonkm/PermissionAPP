@@ -1,0 +1,194 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.permissionapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:6:5-73
+8        android:minSdkVersion="27"
+8-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:6:5-73
+9        android:targetSdkVersion="32" />
+9-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:6:5-73
+10
+11    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+11-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:22:5-65
+11-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:22:22-62
+12    <uses-feature
+12-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
+13        android:name="android.hardware.camera"
+13-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:26:9-47
+14        android:required="false" />
+14-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:27:9-33
+15    <uses-feature
+15-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+16        android:name="android.hardware.camera.front"
+16-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+17        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+17-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+18    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+19    <uses-feature
+19-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+20        android:name="android.hardware.camera.autofocus"
+20-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+21        android:required="false" />
+21-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+22    <uses-feature
+22-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+23        android:name="android.hardware.camera.flash"
+23-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+24        android:required="false" />
+24-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+25    <uses-feature
+25-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+26        android:name="android.hardware.screen.landscape"
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+27        android:required="false" />
+27-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+28    <uses-feature
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+29        android:name="android.hardware.wifi"
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+30        android:required="false" />
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+31
+32    <application
+32-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:8:5-39:19
+33        android:allowBackup="true"
+33-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:9:9-35
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.8.0] C:\Users\jasso\.gradle\caches\transforms-3\319818de8066db9dee1015fa48896948\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+35        android:dataExtractionRules="@xml/data_extraction_rules"
+35-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:10:9-65
+36        android:debuggable="true"
+37        android:extractNativeLibs="false"
+38        android:fullBackupContent="@xml/backup_rules"
+38-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:11:9-54
+39        android:hardwareAccelerated="true"
+39-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:12:9-43
+40        android:icon="@mipmap/ic_launcher"
+40-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:13:9-43
+41        android:label="@string/app_name"
+41-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:14:9-41
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:15:9-54
+43        android:supportsRtl="true"
+43-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:16:9-35
+44        android:theme="@style/Theme.PermissionApp" >
+44-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:17:9-51
+45        <activity
+45-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:19:9-23:70
+46            android:name="com.example.permissionapp.ui.activity.HomeActivity"
+46-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:20:13-53
+47            android:exported="false"
+47-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:21:13-37
+48            android:label="@string/title_activity_home"
+48-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:22:13-56
+49            android:theme="@style/Theme.PermissionApp.NoActionBar" />
+49-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:23:13-67
+50        <activity
+50-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:24:9-26:40
+51            android:name="com.example.permissionapp.ui.activity.LoginActivity"
+51-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:25:13-54
+52            android:exported="false" />
+52-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:26:13-37
+53        <activity
+53-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:27:9-29:40
+54            android:name="com.example.permissionapp.ui.activity.UserActivity"
+54-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:28:13-53
+55            android:exported="false" />
+55-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:29:13-37
+56        <activity
+56-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:30:9-38:20
+57            android:name="com.example.permissionapp.ui.activity.MainActivity"
+57-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:31:13-53
+58            android:exported="true" >
+58-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:32:13-36
+59            <intent-filter>
+59-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:33:13-37:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:34:17-69
+60-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:34:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:36:17-77
+62-->C:\Users\jasso\Documents\PermissionApp\PermissionApp\app\src\main\AndroidManifest.xml:36:27-74
+63            </intent-filter>
+64        </activity>
+65        <activity
+65-->[androidx.compose.ui:ui-tooling:1.2.1] C:\Users\jasso\.gradle\caches\transforms-3\d47c09a7424af6fdf72db8c07a5dd6c5\transformed\ui-tooling-1.2.1\AndroidManifest.xml:24:9-26:39
+66            android:name="androidx.compose.ui.tooling.PreviewActivity"
+66-->[androidx.compose.ui:ui-tooling:1.2.1] C:\Users\jasso\.gradle\caches\transforms-3\d47c09a7424af6fdf72db8c07a5dd6c5\transformed\ui-tooling-1.2.1\AndroidManifest.xml:25:13-71
+67            android:exported="true" />
+67-->[androidx.compose.ui:ui-tooling:1.2.1] C:\Users\jasso\.gradle\caches\transforms-3\d47c09a7424af6fdf72db8c07a5dd6c5\transformed\ui-tooling-1.2.1\AndroidManifest.xml:26:13-36
+68        <activity
+68-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+69            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+69-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+70            android:clearTaskOnLaunch="true"
+70-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+71            android:screenOrientation="sensorLandscape"
+71-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+72            android:stateNotNeeded="true"
+72-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+73            android:theme="@style/zxing_CaptureTheme"
+73-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+74            android:windowSoftInputMode="stateAlwaysHidden" />
+74-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\jasso\.gradle\caches\transforms-3\fe205c741c8db17bbec567f203bb80ae\transformed\zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+75
+76        <provider
+76-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jasso\.gradle\caches\transforms-3\73392ce70148740a213c912606e6e592\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+77            android:name="androidx.startup.InitializationProvider"
+77-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jasso\.gradle\caches\transforms-3\73392ce70148740a213c912606e6e592\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+78            android:authorities="com.example.permissionapp.androidx-startup"
+78-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jasso\.gradle\caches\transforms-3\73392ce70148740a213c912606e6e592\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+79            android:exported="false" >
+79-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jasso\.gradle\caches\transforms-3\73392ce70148740a213c912606e6e592\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+80            <meta-data
+80-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jasso\.gradle\caches\transforms-3\73392ce70148740a213c912606e6e592\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+81                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+81-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jasso\.gradle\caches\transforms-3\73392ce70148740a213c912606e6e592\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+82                android:value="androidx.startup" />
+82-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jasso\.gradle\caches\transforms-3\73392ce70148740a213c912606e6e592\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+83            <meta-data
+83-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\jasso\.gradle\caches\transforms-3\b4411e330534bfab92f112750c9fdb33\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+84                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+84-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\jasso\.gradle\caches\transforms-3\b4411e330534bfab92f112750c9fdb33\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+85                android:value="androidx.startup" />
+85-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\jasso\.gradle\caches\transforms-3\b4411e330534bfab92f112750c9fdb33\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+86            <meta-data
+86-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+87                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+87-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
+88                android:value="androidx.startup" />
+88-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+89        </provider>
+90
+91        <receiver
+91-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+92            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+92-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+93            android:directBootAware="false"
+93-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+94            android:enabled="true"
+94-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+95            android:exported="true"
+95-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+96            android:permission="android.permission.DUMP" >
+96-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+97            <intent-filter>
+97-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+98                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+98-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+98-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+99            </intent-filter>
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+101                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+101-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\jasso\.gradle\caches\transforms-3\19a0c00ab3174edbe11930c102e22c9f\transformed\profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+102            </intent-filter>
+103        </receiver>
+104    </application>
+105
+106</manifest>

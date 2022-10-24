@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.permissionapp.ui.activity.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="com.example.permissionapp.ui.activity.ui.events.EventsFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_events" />
+
+    <fragment
+        android:id="@+id/nav_scan"
+        android:name="com.example.permissionapp.ui.activity.ui.scan.ScanFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_scan" />
+    <fragment
+        android:id="@+id/nav_show_qr"
+        android:name="com.example.permissionapp.ui.activity.ui.showQR.ShowQRFragment"
+        android:label="Mostrar QR"
+        tools:layout="@layout/fragment_show_q_r"/>
+</navigation>
