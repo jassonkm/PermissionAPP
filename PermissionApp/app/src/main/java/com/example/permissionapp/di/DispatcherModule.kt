@@ -1,4 +1,4 @@
-package com.example.permissionapp.data.di
+package com.example.permissionapp.di
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

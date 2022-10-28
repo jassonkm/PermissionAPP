@@ -11,21 +11,5 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        user()
-        home()
-    }
-
-    private fun home() {
-        binding.btnLogin.setOnClickListener{
-            val intent= Intent(this,HomeActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    fun user(){
-        binding.btnCreate.setOnClickListener{
-            val intent = Intent(this, UserActivity::class.java)
-            startActivity(intent)
-        }
     }
 }
