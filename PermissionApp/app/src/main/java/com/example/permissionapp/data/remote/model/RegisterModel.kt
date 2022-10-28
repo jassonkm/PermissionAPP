@@ -4,7 +4,7 @@ package com.example.permissionapp.data.remote.model
 import com.google.gson.annotations.SerializedName
 import java.util.*
 
-data class UserModel(
+data class LoginModel(
     @SerializedName("id") val id:Long,
     @SerializedName("nombre")val name: String,
     @SerializedName("apellido")val lastName: String,
@@ -13,5 +13,5 @@ data class UserModel(
     @SerializedName("type_documento") val typeId: String,
     @SerializedName("id_numero")val idNumber: String,
     @SerializedName("bitrthday")val birthday: Date,
-    @SerializedName("estado")val state: Boolean,
+    @SerializedName("roles")val role: List<String>
 )
