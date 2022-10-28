@@ -49,13 +49,15 @@ dependencies {
     //viewmodel
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     //livedata
-    //scanner
+
     //compose
     implementation 'androidx.activity:activity-compose:1.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1'
     // UI Tests
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.2.1'
+
     implementation 'androidx.compose.material:material:1.2.1'
+    //scanner
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
     //Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
