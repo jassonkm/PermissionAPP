@@ -33,4 +33,4 @@
   android:layout_marginBottom="16dp"
   app:srcCompat="@drawable/scan_qr" />
 
-  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

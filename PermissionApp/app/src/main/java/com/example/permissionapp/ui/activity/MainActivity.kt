@@ -15,15 +15,12 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    fun login(){
-        binding.btnAdmin.setOnClickListener{
-            goLogin()
-        }
+    private fun login(){
         binding.btnUser.setOnClickListener{
            goLogin()
         }
     }
-    fun goLogin(){
+    private fun goLogin(){
         val intent= Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }

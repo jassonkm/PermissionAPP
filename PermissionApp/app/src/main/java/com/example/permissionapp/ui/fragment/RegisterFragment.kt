@@ -6,20 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.permissionapp.R
+import com.example.permissionapp.data.remote.model.RegisterModel
 import com.example.permissionapp.databinding.FragmentRegisterBinding
 import com.example.permissionapp.ui.viewModel.RegisterViewModel
+import com.example.permissionapp.utils.Constants
 
 
 class RegisterFragment : Fragment() {
 
     private lateinit var binding: FragmentRegisterBinding
     private lateinit var navController: NavController
-    //private lateinit var register: Register
+    private lateinit var register: RegisterModel
 
     private val registerViewModel: RegisterViewModel by viewModels()
 
@@ -33,6 +37,7 @@ class RegisterFragment : Fragment() {
         openPicker()
         spinner()
         //goBackLogin(view)
+        setAdmin()
         launchScannerFragment(view)
     }
     private fun spinner() {
@@ -62,15 +67,24 @@ class RegisterFragment : Fragment() {
         goScanner.setOnClickListener{
             navController.navigate(R.id.scannerFragment)
         }
-        
-    }
-    private fun goBackLogin(view: View) {
-        val backLogin = binding.btnNext
 
-        navController = Navigation.findNavController(view)
-        backLogin.setOnClickListener {
-            navController.navigate(R.id.loginFragment)
-        }
     }
+    private fun setAdmin(){
+        binding.btnAdmin.setOnClickListener{
+            AdminDialogFragment(
+                onSubmitClickListener = { password->
+                    if (password.equals(Constants.PASSWORD_ADMIN)){
+                        binding.showAdmin.visibility=View.VISIBLE
+                        binding.layoutBtnAdmin.visibility=View.GONE
+                    }
+                    else{
+                        Toast.makeText(context, "Clave admin incorrecto", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            ).show(parentFragmentManager,"Dialog")
+        }
+
+    }
+
 
 }

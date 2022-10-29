@@ -17,6 +17,7 @@
     <string name="tv_typeId">Tipo de documento</string>
     <string name="tv_data">Acepto politica de tratamiento de datos.</string>
     <string name="tv_condition">Acepto terminos y condiciones.</string>
+    <string name="tv_admin">Opcion ADMIN.</string>
     <string name="tv_password">Contraseña</string>
     <string name="tv_passC">Confirmar contraseña</string>
     <string name="tv_next">Siguiente</string>
@@ -43,8 +44,13 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="tx_accepted">Aceptar</string>
+    <string name="tx_cancel">Cancelar</string>
+
 
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Agregar evento</string>
     <string name="menu_slideshow">Escanear QR</string>
+    <string name="tv_text_admin">Ingrese clave administrador</string>
+    <string name="tv_text_admin2">Por favor ingrese la clave ADMIN</string>
 </resources>
