@@ -85,6 +85,16 @@ class RegisterFragment : Fragment() {
         }
 
     }
+    private fun validFields(){
+        binding.btnNext.setOnClickListener{
+            val name: String=binding.edtName.text.toString()
+            val lastName:String=binding.edtLastname.text.toString()
+            val email:String=binding.edtEmail.text.toString()
+            val password:String=binding.edtPassword.text.toString()
+            val passwordValidation: String=binding.edtPassword2.text.toString()
+            val typeId:String=binding.spinTypeId.adapter.toString()
+        }
+    }
 
 
 }
