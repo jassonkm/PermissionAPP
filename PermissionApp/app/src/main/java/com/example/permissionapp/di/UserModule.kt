@@ -5,11 +5,12 @@ import com.example.permissionapp.data.repository.impl.RegisterRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 
 @Module
-@InstallIn
+@InstallIn(SingletonComponent::class)
 object UserModule {
 
     @Provides

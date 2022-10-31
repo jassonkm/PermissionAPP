@@ -84,7 +84,7 @@
         android:layout_height="57dp"
         android:layout_marginBottom="164dp"
         android:shadowRadius="@integer/material_motion_duration_long_1"
-        android:text="crear cuenta"
+        android:text="@string/tx_register"
         android:textColor="@color/teal_200"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
