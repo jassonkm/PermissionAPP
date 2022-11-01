@@ -10,8 +10,8 @@ data class RegisterModel(
     @SerializedName("apellido")val lastName: String,
     @SerializedName("email")val email: String,
     @SerializedName("password")val password: String,
-    @SerializedName("type_documento") val typeId: String,
-    @SerializedName("id_numero")val idNumber: String,
-    @SerializedName("bitrthday")val birthday: Date,
-    @SerializedName("roles")val role: List<String>
+    @SerializedName("typeid") val typeId: String,
+    @SerializedName("idNum")val idNumber: String,
+    @SerializedName("birthday")val birthday: String,
+    @SerializedName("role")val role: List<String>
 )

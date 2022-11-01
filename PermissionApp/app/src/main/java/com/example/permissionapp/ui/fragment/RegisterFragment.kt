@@ -48,29 +48,32 @@ class RegisterFragment : Fragment() {
         setAdmin()
         validFields()
         setObservers()
-        launchScannerFragment(view)
     }
 
     private fun setObservers() {
-        registerViewModel.isRegister.observe(viewLifecycleOwner, { isRegister ->
-            if (isRegister){
+        registerViewModel.isRegister.observe(viewLifecycleOwner) { isRegister ->
+            if (isRegister) {
                 view?.let { launchScannerFragment(it) }
                 Toast.makeText(context, "Usuario Registrado con exito", Toast.LENGTH_SHORT).show()
             }
-        })
-        registerViewModel.isLoading.observe(viewLifecycleOwner, { isLoading ->
-            if (isLoading){
-                binding.linearLayoutLoading.isVisible=isLoading
-            }else{
-                binding.linearLayoutLoading.isVisible=false
+        }
+        registerViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            if (isLoading) {
+                binding.linearLayoutLoading.isVisible = isLoading
+            } else {
+                binding.linearLayoutLoading.isVisible = false
             }
-        })
-        registerViewModel.error.observe(viewLifecycleOwner,{error ->
-            Toast.makeText(context, "Error: "+MessangeResponse.getErrorMessage(error), Toast.LENGTH_SHORT).show()
-        })
-        registerViewModel.connectivity.observe(viewLifecycleOwner,{ connectivity ->
-            Toast.makeText(context, ""+connectivity, Toast.LENGTH_SHORT).show()
-        })
+        }
+        registerViewModel.error.observe(viewLifecycleOwner) { error ->
+            Toast.makeText(
+                context,
+                "Error: " + MessangeResponse.getErrorMessage(error),
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        registerViewModel.connectivity.observe(viewLifecycleOwner) { connectivity ->
+            Toast.makeText(context, "" + connectivity, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun spinner() {
@@ -92,15 +95,11 @@ class RegisterFragment : Fragment() {
         datePicker.show(parentFragmentManager,"datePicker")
     }
     fun onDateSelect(day:Int, month: Int, year: Int){
-        binding.datePicker.setText("$day/$month/$year")
+        binding.datePicker.setText("$year-$month-$day")
     }
     private fun launchScannerFragment(view: View) {
-        val goScanner = binding.btnNext
         navController = Navigation.findNavController(view)
-        goScanner.setOnClickListener{
-            navController.navigate(R.id.scannerFragment)
-        }
-
+        navController.navigate(R.id.scannerFragment)
     }
     private fun setAdmin(){
         binding.btnAdmin.setOnClickListener{
@@ -125,20 +124,18 @@ class RegisterFragment : Fragment() {
             val email:String=binding.edtEmail.text.toString()
             val password:String=binding.edtPassword.text.toString()
             val passwordValidation: String=binding.edtPassword2.text.toString()
-            val typeId:String=binding.spinTypeId.adapter.toString()
+            val typeId:String=binding.spinTypeId.selectedItem.toString()
             val identification: String = binding.edtNumberId.text.toString()
             val birthday: String=binding.datePicker.text.toString()
             val dataPolity: CheckBox=binding.checkPolity
             val dataCondition: CheckBox= binding.checkCondition
             val adminROle: CheckBox =binding.checkAdmin
-            val formatter = SimpleDateFormat("yyyy-MM-dd")
-            val date: Date= formatter.parse(birthday) as Date
 
             if (name.isNotEmpty() && lastName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && passwordValidation.isNotEmpty() && typeId.isNotEmpty() && identification.isNotEmpty() && birthday.isNotEmpty()){
                 if(Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                     if (password.length >= 6 && password.equals(passwordValidation)){
                         if (dataPolity.isChecked && dataCondition.isChecked){
-                            userRegister(name,lastName,email,password,typeId,identification,date,adminROle)
+                            userRegister(name,lastName,email,password,typeId,identification,birthday,adminROle)
                         }else{
                             Toast.makeText(context, "Por favor acepte condiciones", Toast.LENGTH_SHORT).show()
                         }
@@ -160,7 +157,7 @@ class RegisterFragment : Fragment() {
         password: String,
         typeId: String,
         identification: String,
-        birthday: Date,
+        birthday: String,
         adminRole: CheckBox
     ){
         register= RegisterModel(name,lastName,email,password,typeId,identification,birthday,setUpRol(adminRole))
