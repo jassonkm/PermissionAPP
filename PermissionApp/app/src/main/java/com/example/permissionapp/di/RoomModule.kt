@@ -19,13 +19,6 @@ object RoomModule {
     fun provideRoom(@ApplicationContext context: Context ) =
         Room.databaseBuilder(context, PermissionDataBase::class.java,Constants.DATABASE_NAME).build()
 
-    @Singleton
-    @Provides
-    fun provideUserDatabase(permissionDataBase: PermissionDataBase) = permissionDataBase.userDao()
-
-    @Singleton
-    @Provides
-    fun provideRolDatabase(permissionDataBase: PermissionDataBase) = permissionDataBase.rolDao()
 
     @Singleton
     @Provides

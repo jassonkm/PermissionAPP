@@ -54,5 +54,6 @@
     <string name="tv_text_admin">Ingrese clave administrador</string>
     <string name="tv_text_admin2">Por favor ingrese la clave ADMIN</string>
     <string name="registering">registrando..</string>
+    <string name="logging">Iniciando sesion..</string>
     <string name="tx_register">CREAR CUENTA</string>
 </resources>

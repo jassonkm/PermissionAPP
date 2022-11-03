@@ -1,9 +1,7 @@
 package com.example.permissionapp.data.remote.model
 
 
-import com.example.permissionapp.domain.model.Role
 import com.google.gson.annotations.SerializedName
-import java.util.*
 
 data class RegisterModel(
     @SerializedName("nombre")val name: String,

@@ -4,7 +4,6 @@ package com.example.permissionapp.data.repository.impl
 import com.example.permissionapp.di.IoDispatcher
 import com.example.permissionapp.data.remote.api.ApiService
 import com.example.permissionapp.data.remote.model.RegisterModel
-import com.example.permissionapp.data.remote.model.response.RegisterResponse
 import com.example.permissionapp.data.repository.RegisterRepository
 import com.skydoves.sandwich.ApiResponse
 import javax.inject.Inject
@@ -16,7 +15,7 @@ class RegisterRepositoryImpl @Inject constructor(
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) :RegisterRepository{
 
-    override suspend fun registerUser(registerModel: RegisterModel): ApiResponse<RegisterResponse> = withContext(ioDispatcher) {
+    override suspend fun registerUser(registerModel: RegisterModel): ApiResponse<RegisterModel> = withContext(ioDispatcher) {
         apiService.registerUser(registerModel)
     }
 }
