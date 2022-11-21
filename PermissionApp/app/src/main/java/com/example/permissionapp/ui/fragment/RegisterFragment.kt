@@ -24,8 +24,6 @@ import com.example.permissionapp.utils.Dynamics
 import com.example.permissionapp.utils.MessangeResponse
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
-import java.util.*
 import kotlin.collections.ArrayList
 
 @AndroidEntryPoint
@@ -59,7 +57,7 @@ class RegisterFragment : Fragment() {
     private fun setObservers() {
         registerViewModel.isRegister.observe(viewLifecycleOwner) { isRegister ->
             if (isRegister) {
-                view?.let { launchScannerFragment(it) }
+                view?.let { launchLoginFragment(it) }
                 Toast.makeText(context, "Usuario Registrado con exito", Toast.LENGTH_SHORT).show()
             }
         }
@@ -101,11 +99,22 @@ class RegisterFragment : Fragment() {
         datePicker.show(parentFragmentManager,"datePicker")
     }
     fun onDateSelect(day:Int, month: Int, year: Int){
-        binding.datePicker.setText("$year-$month-$day")
+        if (day<10 && month<10){
+            binding.datePicker.setText("$year-0$month-0$day")
+        }
+
+        else if (month<10){
+            binding.datePicker.setText("$year-0$month-$day")
+        }
+        else if(day<10){
+            binding.datePicker.setText("$year-$month-0$day")
+        }
+        else
+            binding.datePicker.setText("$year-$month-$day")
     }
-    private fun launchScannerFragment(view: View) {
+    private fun launchLoginFragment(view: View) {
         navController = Navigation.findNavController(view)
-        navController.navigate(R.id.scannerFragment)
+        navController.navigate(R.id.loginFragment)
     }
     private fun setAdmin(){
         binding.btnAdmin.setOnClickListener{
