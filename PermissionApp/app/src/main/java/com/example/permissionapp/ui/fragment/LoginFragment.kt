@@ -36,17 +36,17 @@ class LoginFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        launchRegisterFragment(view)
+        launchScannerFragment(view)
         validFields()
         setObservers()
     }
 
-    private fun launchRegisterFragment(view: View) {
+    private fun launchScannerFragment(view: View) {
         val register = binding.btnCreate
 
         navController = Navigation.findNavController(view)
         register.setOnClickListener {
-            navController.navigate(R.id.registerFragment)
+            navController.navigate(R.id.scannerFragment)
         }
     }
     private fun goHomeView(){

@@ -7,3 +7,6 @@ object Constants {
     const val USER="ROL_USER"
     const val ADMIN="ROLE_ADMIN"
 }
+object Dynamics{
+    var CC=""
+}

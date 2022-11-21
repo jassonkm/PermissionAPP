@@ -20,6 +20,7 @@ import com.example.permissionapp.data.remote.model.RegisterModel
 import com.example.permissionapp.databinding.FragmentRegisterBinding
 import com.example.permissionapp.ui.viewModel.RegisterViewModel
 import com.example.permissionapp.utils.Constants
+import com.example.permissionapp.utils.Dynamics
 import com.example.permissionapp.utils.MessangeResponse
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -48,6 +49,11 @@ class RegisterFragment : Fragment() {
         setAdmin()
         validFields()
         setObservers()
+        setCc()
+    }
+
+    private fun setCc() {
+        binding.edtNumberId.text=Dynamics.CC
     }
 
     private fun setObservers() {
