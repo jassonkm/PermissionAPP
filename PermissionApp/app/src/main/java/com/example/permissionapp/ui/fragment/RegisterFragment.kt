@@ -69,11 +69,20 @@ class RegisterFragment : Fragment() {
             }
         }
         registerViewModel.error.observe(viewLifecycleOwner) { error ->
-            Toast.makeText(
-                context,
-                "Error: " + MessangeResponse.getErrorMessage(error),
-                Toast.LENGTH_SHORT
-            ).show()
+            try {
+                Toast.makeText(
+                    context,
+                    "Error: " + MessangeResponse.getErrorMessage(error),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }catch (e: Exception){
+                Toast.makeText(
+                    context,
+                    "Error: $e",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
         }
         registerViewModel.connectivity.observe(viewLifecycleOwner) { connectivity ->
             Toast.makeText(context, "" + connectivity, Toast.LENGTH_SHORT).show()
