@@ -10,8 +10,12 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_registerFragment"
+            android:id="@+id/action_loginFragment_to_showFragment"
+            app:destination="@id/showFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_scannerFragment"
             app:destination="@+id/scannerFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -25,15 +29,22 @@
     <fragment
         android:id="@+id/scannerFragment"
         android:name="com.example.permissionapp.ui.fragment.ScannerFragment"
-        android:label="fragment_register"
+        android:label="fragment_scanner"
         tools:layout="@layout/fragment_scanner" >
         <action
             android:id="@+id/action_registerFragment_to_scannerFragment"
             app:destination="@id/registerFragment" />
 
     </fragment>
+    <fragment
+        android:id="@+id/showFragment"
+        android:name="com.example.permissionapp.ui.fragment.Show"
+        android:label="fragment_show"
+        tools:layout="@layout/fragment_show" >
+        <action
+            android:id="@+id/action_showFragment_to_LoginFragment"
+            app:destination="@id/loginFragment" />
 
-
-
+    </fragment>
 
 </navigation>

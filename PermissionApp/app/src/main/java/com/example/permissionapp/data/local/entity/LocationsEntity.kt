@@ -15,6 +15,6 @@ import androidx.room.*
     @ColumnInfo(name="capacity")
     val capacity: Int,
 
-    @ColumnInfo(name = "idEventFK")
-    val idEventFK: Int
+    @Embedded(prefix = "event_")
+    val eventEntity: EventEntity
  )

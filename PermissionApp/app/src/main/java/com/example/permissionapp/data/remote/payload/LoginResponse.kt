@@ -7,5 +7,5 @@ data class LoginResponse(
     @SerializedName("email")val email: String,
     @SerializedName("type") val type: String = "Bearer",
     @SerializedName("token") val token: String,
-    @SerializedName("role") val roles: ArrayList<String>
+    @SerializedName("roles") val roles: ArrayList<String>
 )

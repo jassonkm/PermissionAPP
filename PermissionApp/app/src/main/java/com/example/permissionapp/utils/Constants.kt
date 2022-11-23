@@ -6,7 +6,9 @@ object Constants {
     const val PASSWORD_ADMIN="1234"
     const val USER="ROL_USER"
     const val ADMIN="ROLE_ADMIN"
+    const val CONFIRMATION="CONFIRMATION"
 }
 object Dynamics{
     var CC=""
+    var ROL=""
 }

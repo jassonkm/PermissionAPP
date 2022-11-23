@@ -16,7 +16,6 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.permissionapp.data.remote.model.LoginModel
 import com.example.permissionapp.databinding.FragmentLoginBinding
-import com.example.permissionapp.ui.activity.HomeActivity
 import com.example.permissionapp.ui.viewModel.LoginViewModel
 import com.example.permissionapp.utils.MessangeResponse
 import dagger.hilt.android.AndroidEntryPoint
@@ -46,17 +45,18 @@ class LoginFragment : Fragment() {
 
         navController = Navigation.findNavController(view)
         register.setOnClickListener {
-            navController.navigate(R.id.scannerFragment)
+            navController.navigate(R.id.action_loginFragment_to_scannerFragment)
         }
     }
-    private fun goHomeView(){
-        val intent=Intent(context,HomeActivity::class.java)
-        startActivity(intent)
+    private fun launchShowFragment(view: View) {
+        navController = Navigation.findNavController(view)
+        navController.navigate(R.id.action_loginFragment_to_showFragment)
     }
+
     private fun setObservers() {
         loginViewModel.isLogin.observe(viewLifecycleOwner) { isRegister ->
             if (isRegister) {
-                 goHomeView()
+                view?.let { launchShowFragment(it) }
                 Toast.makeText(context, "Sesion iniciada con exito", Toast.LENGTH_SHORT).show()
             }
         }

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.permissionapp.data.remote.model.LoginModel
 import com.example.permissionapp.data.repository.LoginRepository
+import com.example.permissionapp.utils.Dynamics
 import com.example.permissionapp.utils.NetworkHelper
 import com.skydoves.sandwich.onError
 import com.skydoves.sandwich.onFailure
@@ -43,6 +44,8 @@ class LoginViewModel @Inject constructor(
                 loginRepository.loginUser(loginModel)
                     .onSuccess {
                         _isLoading.postValue(false)
+                        Dynamics.ROL= response.body()?.roles.toString()
+                        Log.e( "onLoginUser: ",""+Dynamics.ROL )
                         _isLogin.postValue(true)
                     }.onError {
                         _isLoading.postValue(false)
