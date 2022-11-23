@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PermissionApp</string>
-    <string name="author">Yeison Maldonado</string>
+    <string name="author">Grupo Permission</string>
     <string name="btnAdmin">Administrador</string>
     <string name="btnUser">Ingreso usuario</string>
     <string name="tvDescri">La verificacion a tu bolsillo</string>
