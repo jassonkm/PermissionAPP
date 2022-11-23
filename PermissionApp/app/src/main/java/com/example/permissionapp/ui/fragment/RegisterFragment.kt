@@ -22,6 +22,7 @@ import com.example.permissionapp.ui.viewModel.RegisterViewModel
 import com.example.permissionapp.utils.Constants
 import com.example.permissionapp.utils.Dynamics
 import com.example.permissionapp.utils.MessangeResponse
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import kotlin.collections.ArrayList
@@ -68,13 +69,9 @@ class RegisterFragment : Fragment() {
                 binding.linearLayoutLoading.isVisible = false
             }
         }
-        registerViewModel.error.observe(viewLifecycleOwner) { error ->
+        registerViewModel.error.observe(viewLifecycleOwner) {
             try {
-                Toast.makeText(
-                    context,
-                    "Error: " + MessangeResponse.getErrorMessage(error),
-                    Toast.LENGTH_SHORT
-                ).show()
+                view?.let {  Snackbar.make(it,"Usuario ya registrado", Snackbar.LENGTH_SHORT).show()}
             }catch (e: Exception){
                 Toast.makeText(
                     context,
@@ -134,7 +131,7 @@ class RegisterFragment : Fragment() {
                         binding.layoutBtnAdmin.visibility=View.GONE
                     }
                     else{
-                        Toast.makeText(context, "Clave admin incorrecto", Toast.LENGTH_SHORT).show()
+                        view?.let {  Snackbar.make(it,"Clave admin incorrecta", Snackbar.LENGTH_SHORT).show()}
                     }
                 }
             ).show(parentFragmentManager,"Dialog")
@@ -161,16 +158,16 @@ class RegisterFragment : Fragment() {
                         if (dataPolity.isChecked && dataCondition.isChecked){
                             userRegister(name,lastName,email,password,typeId,identification,birthday,adminROle)
                         }else{
-                            Toast.makeText(context, "Por favor acepte condiciones", Toast.LENGTH_SHORT).show()
+                            view?.let {  Snackbar.make(it,"Por favor acepte condiciones", Snackbar.LENGTH_SHORT).show()}
                         }
                     }else{
-                        Toast.makeText(context, "Minimo 6 caracteres para la contraseña o confirmacion invalidad", Toast.LENGTH_SHORT).show()
+                        view?.let {  Snackbar.make(it,"Minimo 6 caracteres para la contraseña o confirmacion invalidada", Snackbar.LENGTH_SHORT).show()}
                     }
                 }else{
-                    Toast.makeText(context, "Correo invalido", Toast.LENGTH_SHORT).show()
+                    view?.let {  Snackbar.make(it,"Correo invalido", Snackbar.LENGTH_SHORT).show()}
                 }
             }else{
-                Toast.makeText(context, "Ningun campo puede estar vacio", Toast.LENGTH_SHORT).show()
+                view?.let {  Snackbar.make(it,"Ningun campo puede estar vacio", Snackbar.LENGTH_SHORT).show()}
             }
         }
     }

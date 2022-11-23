@@ -18,6 +18,7 @@ import com.example.permissionapp.data.remote.model.LoginModel
 import com.example.permissionapp.databinding.FragmentLoginBinding
 import com.example.permissionapp.ui.viewModel.LoginViewModel
 import com.example.permissionapp.utils.MessangeResponse
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -70,11 +71,7 @@ class LoginFragment : Fragment() {
         loginViewModel.error.observe(viewLifecycleOwner) { error ->
             if (error.isNotEmpty())
             {
-                Toast.makeText(
-                    context,
-                    "Error: Usuario o contraseña invalids" ,
-                    Toast.LENGTH_SHORT
-                ).show()
+                view?.let {  Snackbar.make(it,"Error: Usuario o contraseña invalida", Snackbar.LENGTH_SHORT).show()}
             }
             else{
                 Toast.makeText(
@@ -100,10 +97,10 @@ class LoginFragment : Fragment() {
                         loginViewModel.onLoginUser(login)
                     }
                 }else{
-                    Toast.makeText(context, "Correo invalido", Toast.LENGTH_SHORT).show()
+                    view?.let {  Snackbar.make(it,"Correo invalido", Snackbar.LENGTH_SHORT).show()}
                 }
             }else{
-                Toast.makeText(context, "Ningun campo puede estar vacio", Toast.LENGTH_SHORT).show()
+                view?.let {  Snackbar.make(it,"Ningún campo puede estar vacío", Snackbar.LENGTH_SHORT).show()}
             }
         }
     }

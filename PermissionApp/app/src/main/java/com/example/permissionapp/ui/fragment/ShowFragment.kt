@@ -3,14 +3,15 @@ package com.example.permissionapp.ui.fragment
 
 import android.content.Intent
 import android.graphics.Bitmap
-import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
+import com.google.android.material.snackbar.Snackbar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.permissionapp.R
 import com.example.permissionapp.databinding.FragmentShowBinding
 import com.example.permissionapp.utils.Constants
@@ -23,8 +24,9 @@ import com.journeyapps.barcodescanner.ScanOptions
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class Show : Fragment(R.id.showFragment) {
+class ShowFragment : Fragment(R.id.showFragment) {
     private lateinit var binding: FragmentShowBinding
+    private lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,6 +42,7 @@ class Show : Fragment(R.id.showFragment) {
         showTextScan()
         showQR()
         initScanner()
+        logOut()
     }
     private fun showTextScan(){
         if (Dynamics.ROL== "[ROLE_ADMIN]"){
@@ -72,18 +75,33 @@ class Show : Fragment(R.id.showFragment) {
             val aplicationContext= activity?.applicationContext
             Log.e( "onActivityResult: ", ""+result.contents)
             if (result.contents==null){
-                Toast.makeText(aplicationContext,"Cancelado", Toast.LENGTH_SHORT).show()
+                view?.let {  Snackbar.make(it,"Escaneo cancelado",Snackbar.LENGTH_SHORT).show()}
             }else{
                 Log.e( "onActivityResult: ",""+result.contents )
-                if (result.contents==Constants.CONFIRMATION)
-                    Toast.makeText(aplicationContext,"Escaneado correctamente", Toast.LENGTH_SHORT).show()
+                if (result.contents==Constants.CONFIRMATION){
+                    view?.let {  Snackbar.make(it,"Escaneado correctamente",Snackbar.LENGTH_LONG).setAction("Desea salir?"){ it ->
+                        signOut(it)
+                    }.show()}}
                 else
-                    Toast.makeText(aplicationContext,"Codigo QR incorrecto", Toast.LENGTH_SHORT).show()
+                    view?.let {  Snackbar.make(it,"Codigo QR incorrecto",Snackbar.LENGTH_SHORT).show()}
             }
         }
         else{
             super.onActivityResult(requestCode,resultCode,data)
         }
+    }
+    private fun logOut(){
+        binding.logOut.setOnClickListener{
+            view?.let {
+                signOut(it)
+            }
+        }
+    }
+
+
+    private fun signOut(view: View) {
+        navController = Navigation.findNavController(view)
+        navController.navigate(R.id.loginFragment)
     }
 
 }

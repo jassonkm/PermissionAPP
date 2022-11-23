@@ -17,6 +17,7 @@ import com.example.permissionapp.R
 import com.example.permissionapp.databinding.FragmentScannerBinding
 import com.example.permissionapp.utils.Constants
 import com.example.permissionapp.utils.Dynamics
+import com.google.android.material.snackbar.Snackbar
 import com.google.zxing.integration.android.IntentIntegrator
 import com.google.zxing.integration.android.IntentResult
 import com.journeyapps.barcodescanner.ScanOptions
@@ -46,7 +47,7 @@ class ScannerFragment : Fragment() {
             navController = Navigation.findNavController(view)
             register.setOnClickListener {
                 if (Dynamics.CC.isEmpty()){
-                    Toast.makeText(context,"Cancelado, escanee un documento",Toast.LENGTH_SHORT).show()
+                    Snackbar.make(view,"Cancelado, escanee un documento", Snackbar.LENGTH_SHORT).show()
                 }else{
                     navController.navigate(R.id.registerFragment)
             }
@@ -71,10 +72,10 @@ class ScannerFragment : Fragment() {
             val aplicationContext= activity?.applicationContext
             Log.e( "onActivityResult: ", ""+result.contents)
             if (result.contents==null){
-                Toast.makeText(aplicationContext,"Cancelado",Toast.LENGTH_SHORT).show()
+                view?.let {  Snackbar.make(it,"Escaner Cancelado", Snackbar.LENGTH_SHORT).show()}
             }else{
                 getDataId(result.contents)
-                Toast.makeText(aplicationContext,"Escaneado correctamente",Toast.LENGTH_SHORT).show()
+                view?.let {  Snackbar.make(it,"Escaneado correctamente", Snackbar.LENGTH_SHORT).show()}
             }
         }
         else{

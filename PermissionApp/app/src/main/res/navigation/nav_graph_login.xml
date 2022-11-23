@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/showFragment"
-        android:name="com.example.permissionapp.ui.fragment.Show"
+        android:name="com.example.permissionapp.ui.fragment.ShowFragment"
         android:label="fragment_show"
         tools:layout="@layout/fragment_show" >
         <action

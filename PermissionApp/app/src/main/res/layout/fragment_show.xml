@@ -5,7 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragment.Show">
+    tools:context=".ui.fragment.ShowFragment">
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/logOut"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="08dp"
+        android:layout_marginLeft="250dp"
+        android:text="Cerrar Sesion"
+        />
 
     <LinearLayout
         android:layout_width="404dp"
@@ -43,6 +51,7 @@
             android:textStyle="italic"
             android:visibility="gone"
             android:text="@string/txt_btn_scan"
+
             />
 
 
